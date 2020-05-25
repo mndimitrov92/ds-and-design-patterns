@@ -1,6 +1,7 @@
 """
 Liskov substitution principle.
 Using a derived class should not break any functionality.
+You should be able to substitute a based type with a subtype
 """
 
 
