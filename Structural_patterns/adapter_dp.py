@@ -94,6 +94,32 @@ def test_adapter():
     # in this case caching the already drawn points is the solution
 
 
+### A simpler illustration of an adapter
+# We have a class Square
+class Square:
+    def __init__(self, side=0):
+        self.side = side
+
+
+# And this method that takes a rectangle and calculates the area
+def calc_area(rect):
+    return rect.width * rect.height
+
+
+# In order for the calc area to work we need to create an adapter that exposes width and height properties of the rect object
+class RectAdapter:
+    def __init__(self, square):
+        self.square = square
+
+    @property
+    def width(self):
+        return self.square.side
+
+    @property
+    def height(self):
+        return self.square.side
+
+
 if __name__ == '__main__':
     print("Adapter test:")
     test_adapter()
