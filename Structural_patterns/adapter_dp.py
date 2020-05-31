@@ -106,7 +106,8 @@ def calc_area(rect):
     return rect.width * rect.height
 
 
-# In order for the calc area to work we need to create an adapter that exposes width and height properties of the rect object
+# In order for the calc area to work we need to create an adapter that exposes width and height properties of the
+# rect object
 class RectAdapter:
     def __init__(self, square):
         self.square = square
