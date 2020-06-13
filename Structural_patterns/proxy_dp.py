@@ -84,7 +84,7 @@ class Bitmap:
         print(f"Drawing image {self.filename}")
 
 
-class LaziBitmap():
+class LazyBitmap():
     def __init__(self, filename):
         self.filename = filename
         # set the initial state of bitmap
@@ -109,7 +109,7 @@ def test_virtual_proxy():
     draw_image(image)
     # In order to avoid this we can use the Virtual proxy and lazy initialization
     # Even if it is being drawn multiple time, the image is initialized only once
-    image2 = LaziBitmap("image2.jpg")
+    image2 = LazyBitmap("image2.jpg")
     draw_image(image2)
     draw_image(image2)
     draw_image(image2)
