@@ -25,7 +25,7 @@ USAGE:
 """
 
 
-# Chat room example with a chat room
+# mediator example with a chat room
 class Person:
     def __init__(self, name):
         self.name = name
